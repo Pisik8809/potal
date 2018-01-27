@@ -1,0 +1,22 @@
+[
+    {
+        "type": "sport",
+        "description": "news about all sports events today"
+    },
+    {
+        "type": "economy",
+        "description": "news about ecomonycal stats in all country today"
+    },
+    {
+        "type": "politics",
+        "description": "news about political stats in all country today"
+    },
+    {
+        "type": "other news",
+        "description": "news about animals, hero from common people, interesting cases from our life"
+    },
+    {
+        "type": "wheather",
+        "description": "news about wheather in our country"
+    }
+]

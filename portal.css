@@ -1,0 +1,302 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrapper {
+}
+
+.topmenu {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 15px;
+	display: flex;
+}
+
+
+.topmenu>li {
+	display: inline-block;
+	box-sizing: border-box;
+	flex-basis: 25%;
+	background-color: darksalmon;
+	border: 1px solid black;
+	line-height: 40px;
+}
+
+.topmenu>li>a {
+	text-decoration: none;
+	color: black;
+}
+
+.topmenu>li:nth-of-type(2), .topmenu>li:nth-of-type(3), .topmenu>li:nth-of-type(4) {
+	border-left: 0;
+}
+
+.lvl2 {
+	display: none;
+	font-size: 14px;
+}
+
+.lvl2>li {
+	background-color: red;
+}
+
+.topmenu>li:hover>ul.lvl2 {
+	display: block;
+}
+
+.preview {
+	width: 15%;
+	float: left;
+	height: 640px;
+}
+
+.preview__news {
+	position: relative;
+	border: 1px solid black;
+	padding: 20px 10px;
+	max-height: 160px;
+	overflow: hidden;
+}
+
+.preview__news::after {
+	content: '';
+	height: 5px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+.slider {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  outline: 2px solid black;
+	box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.slider__ins {
+	display: flex;
+	height: 400px;
+	flex-direction: row;
+	text-align: center;
+}
+
+.slider>.slider__ins>img {
+  width: 60%;
+}
+
+.slider>.slider__ins>p {
+	align-content: center;
+	margin: auto;
+  padding: 20px 40px 0 10px;
+  width: 36%;
+}
+
+.slider>.slider__ins>img, .slider>.slider__ins>p {
+  display: inline-block;
+}
+
+.arrow1, .arrow2 {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+		border-radius: 50%;
+		border: 2px solid black;
+}
+
+.arrow1 {
+  left: 0;
+}
+
+.arrow2 {
+  right: 0;
+}
+
+.dot1, .dot2, .dot3 {
+  position: absolute;
+  bottom: 2%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.dot1 {
+  left: 26%;
+}
+
+.dot2 {
+  left: 30%;
+  background: black;
+}
+
+.dot3 {
+  left: 34%;
+}
+
+#modal, .modal1 {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+}
+
+#modal>form {
+	position: relative;
+	display: inline-block;
+	margin-top: 250px;
+	padding: 0 50px;
+	outline: 2px solid white;
+}
+
+#modal>form>input {
+	display: block;
+	margin: 25px auto;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#panel {
+	text-align: center;
+	margin: 20px auto;
+}
+
+.modal1>div {
+	position: relative;
+	padding: 40px 25px;
+  word-wrap:break-word;
+	background: white;
+	margin: 20%;
+}
+
+#common-news {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#common-news>p {
+	width: 	240px;
+	height: 300px;
+	display: inline-block;
+	background: yellow;
+	margin: 10px;
+	padding: 10px;
+	font-size: 16px;
+	border: 2px solid green;
+}
+
+footer {
+	float: left;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	color: white;
+	text-align: center;
+	background: black;
+}
+
+.banner {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 	100%;
+	height: 	100%;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	z-index: 10;
+}
+
+.banner>p {
+	display: inline-block;
+	position: absolute;
+	font-size: 24px;
+	color: white;
+	bottom: 20%;
+	left: 30%;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.accordion_menu {
+	text-align: center;
+	width: 80%;
+	margin: 20px auto;
+}
+
+.accordion_menu>li {
+	display: inline-block;
+	width: 	18%;
+	border: 1px solid red;
+}
+
+.accordion_menu>li>h2 {
+	font-size: 24px;
+	font-weight: 	bold;
+	margin: 20px auto;
+}
+
+.accordion_menu>li>p {
+	padding: 	14px;
+	display: none;
+}
